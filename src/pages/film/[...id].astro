@@ -1,0 +1,12 @@
+---
+const { id } = Astro.params;
+import FilmPage from '../../components/FilmPage.vue';
+import BaseLayout from '../../layouts/base.astro';
+---
+
+<BaseLayout>
+  <FilmPage
+    episodeId={id}
+    client:load
+  />
+</BaseLayout>
